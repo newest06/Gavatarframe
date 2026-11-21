@@ -365,6 +365,40 @@ input[type="range"]:disabled {
   color: var(--muted);
 }
 
+.page-footer {
+  width: min(1180px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 0 0 44px;
+}
+
+.page-footer p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
+}
+
+.page-footer a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(66, 133, 244, 0.35);
+  padding-bottom: 1px;
+  transition: border-color 140ms ease, color 140ms ease;
+}
+
+.page-footer a:hover {
+  color: #1a65d8;
+  border-bottom-color: rgba(26, 101, 216, 0.8);
+}
+
+.page-footer a:focus-visible {
+  outline: 2px solid rgba(66, 133, 244, 0.5);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 @media (max-width: 960px) {
   .workspace {
     grid-template-columns: 1fr;
@@ -379,6 +413,11 @@ input[type="range"]:disabled {
   .page {
     width: min(100vw - 20px, 1180px);
     padding-top: 28px;
+  }
+
+  .page-footer {
+    width: min(100vw - 20px, 1180px);
+    padding-bottom: 32px;
   }
 
   .controls,
@@ -482,6 +521,15 @@ input[type="range"]:disabled {
       </div>
     </section>
   </main>
+
+  <footer class="page-footer">
+    <p>
+      Original project:
+      <a href="https://2010384626.github.io/Google-Avatar-Frame-Generator/" target="_blank" rel="noopener noreferrer">
+        Google Avatar Frame Generator
+      </a>
+    </p>
+  </footer>
 
   <script>
 const COLORS = {
